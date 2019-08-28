@@ -11,10 +11,10 @@
             <div class="panel-body home-info">
                 <ul class="list-unstyled">
                     <li>
-                        <em>官网</em> <span><a href="http://www.thinkcmf.com" target="_blank">www.thinkcmf.com</a></span>
+                        <em>官网</em> <span><a href="https://www.shaoss.com" target="_blank">https://www.shaoss.com</a></span>
                     </li>
-                    <li><em>QQ 群</em> <span>100828313,316669417</span></li>
-                    <li><em>联系邮箱</em> <span>catman@thinkcmf.com</span></li>
+                    <li><em>QQ</em> <span>1827708336</span></li>
+                    <li><em>联系邮箱</em> <span><a href="mailto:iblackangel@163.com">iblackangel@163.com</a></span></li>
                 </ul>
             </div>
         </div>
@@ -58,28 +58,7 @@
             </div>
         </div>
     </case>
-    <case value="MainContributors">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">主要贡献者</h3>
-            </div>
-            <div class="panel-body home-info">
-                <ul class="list-inline">
-                    <li>老猫</li>
-                    <li>Sam</li>
-                    <li>Tuolaji</li>
-                    <li>睡不醒的猪</li>
-                    <li>小夏</li>
-                    <li>Powerless</li>
-                    <li>WelKinVan</li>
-                    <li>Kane</li>
-                    <li>iYting</li>
-                    <li>pl125</li>
-                    <li>五五</li>
-                </ul>
-            </div>
-        </div>
-    </case>
+
     <case value="Contributors">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -87,23 +66,9 @@
             </div>
             <div class="panel-body home-info">
                 <ul class="list-inline">
-                    <li>Kin Ho</li>
-                    <li><a href="https://www.wzxaini9.cn/" target="_blank">Powerless</a></li>
-                    <li>Jess</li>
-                    <li>木兰情</li>
-                    <li>Labulaka</li>
-                    <li><a href="http://www.syousoft.com/" target="_blank">WelKinVan</a></li>
-                    <li><a href="http://blog.sina.com.cn/u/1918098881" target="_blank">Jeson</a></li>
-                    <li>Yim</li>
-                    <li><a href="http://www.jamlee.cn/" target="_blank">Jamlee</a></li>
-                    <li>香香咸蛋黄</li>
-                    <li><a href="http://www.xdmeng.cn" target="_blank">小凯</a></li>
-                    <li>Co</li>
-                    <li>Rainfer</li>
-                    <li><a href="http://www.yaoweixiu.cn/" target="_blank">Kane</a></li>
-                    <li>北岸的云</li>
-                    <li>pl125</li>
-                    <li><a href="http://www.wuwuseo.com/" target="_blank">五五</a></li>
+                    <li><a href="mailto:iblackangel@163.com" target="_blank">黑色天使</a></li>
+                    <li><a href="mailto:iblackangel@163.com" target="_blank">小叶子</a></li>
+                    <li><a href="mailto:iblackangel@163.com" target="_blank">飞龙在天</a></li>
                 </ul>
             </div>
         </div>
@@ -322,24 +287,24 @@
     }
 
     //获取官方通知
-    $.getJSON("//www.thinkcmf.com/service/sms_jsonp.php?lang={$lang_set}&v={$thinkcmf_version}&callback=?",
-        function (data) {
-            var tpl      = '<li><em class="title"></em><span class="content"></span></li>';
-            var $notices = $("#thinkcmf-notices");
-            $notices.empty();
-            if (data.length > 0) {
-                $('#thinkcmf-notices-grid').show();
-                $.each(data, function (i, n) {
-                    var $tpl = $(tpl);
-                    $(".title", $tpl).html(n.title);
-                    $(".content", $tpl).html(n.content);
-                    $notices.append($tpl);
-                });
-            } else {
-                $notices.append("<li>^_^,{:lang('NO_NOTICE')}~~</li>");
-            }
+    // $.getJSON("//www.thinkcmf.com/service/sms_jsonp.php?lang={$lang_set}&v={$thinkcmf_version}&callback=?",
+    //     function (data) {
+    //         var tpl      = '<li><em class="title"></em><span class="content"></span></li>';
+    //         var $notices = $("#thinkcmf-notices");
+    //         $notices.empty();
+    //         if (data.length > 0) {
+    //             $('#thinkcmf-notices-grid').show();
+    //             $.each(data, function (i, n) {
+    //                 var $tpl = $(tpl);
+    //                 $(".title", $tpl).html(n.title);
+    //                 $(".content", $tpl).html(n.content);
+    //                 $notices.append($tpl);
+    //             });
+    //         } else {
+    //             $notices.append("<li>^_^,{:lang('NO_NOTICE')}~~</li>");
+    //         }
 
-        });
+    //     });
 </script>
 <hook name="admin_before_body_end"/>
 </body>
